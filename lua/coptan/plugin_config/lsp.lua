@@ -1,17 +1,24 @@
 local lsp = require("lsp-zero")
 
-lsp.preset("recommended")
-
--- Fix Undefined global 'vim'
-lsp.configure('lua-language-server', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
         }
     }
 })
+
+lsp.preset("recommended")
+
+lsp.ensure_installed({
+    'pylsp',
+    'html',
+    'cssls'
+})
+
+lsp.nvim_workspace()
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
@@ -32,10 +39,10 @@ lsp.setup_nvim_cmp({
 lsp.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
-        error = "E",
-        warning = "W",
-        hint = "H",
-        information = "I",
+        error = 'E',
+        warn = 'W',
+        hint = 'H',
+        info = 'I'
     }
 })
 
