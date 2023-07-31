@@ -14,9 +14,14 @@ return require 'packer'.startup(function(use)
         requires = { { "nvim-lua/plenary.nvim" } },
     })
 
-    use { "catppuccin/nvim", as = "catppuccin" }
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
-    use 'lukas-reineke/indent-blankline.nvim'
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            vim.cmd('colorscheme rose-pine')
+        end
+    })
+
     use({
         "folke/trouble.nvim",
         config = function()
@@ -71,12 +76,8 @@ return require 'packer'.startup(function(use)
             vim.fn["mkdp#util#install"]()
         end,
     })
-    use 'mzlogin/vim-markdown-toc'
 
     use 'brenoprata10/nvim-highlight-colors'
     use 'ziontee113/color-picker.nvim'
-
     use 'numToStr/Comment.nvim'
-    -- use 'kyazdani42/nvim-web-devicons'
-    use 'folke/todo-comments.nvim'
 end)
