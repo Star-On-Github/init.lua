@@ -20,7 +20,7 @@ A neovim distrubtion that will be maintained actively by me and targets to have 
 ## How to Install
 
 1. Make sure you have clean setup (```rm -rf ~/.config/nvim```)
-2. Clone this repo(```git clone https://github.com/Coptan99/init.lua .config/nvim```) 
+2. Clone this repo(```git clone https://github.com/Coptan99/init.lua .config/nvim```)
 3. Run nvim
 4. Run `:PackerSync` (This will install all required plugins)
 
@@ -37,7 +37,7 @@ A neovim distrubtion that will be maintained actively by me and targets to have 
 - [X] Beta release.
 - [ ] Add more functional packages.
 - [ ] Make the look more minimalistic.
-- [ ] Skip errors at the first setup (Maybe **pcall** works xD).
+- [X] Skip errors at the first setup (Maybe **pcall** works xD).
 - [ ] Add appimage installation tutorial.
 - [ ] Add dap (Debugger Adapter Protocol).
 

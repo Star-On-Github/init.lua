@@ -1,3 +1,7 @@
+if not pcall(require, "color-picker") then
+    return
+end
+
 local opts = { noremap = true, silent = true }
 
 vim.keymap.set("n", "<leader>cc", "<cmd>PickColor<cr>", opts)
