@@ -1,6 +1,7 @@
-require("coptan.packer")
-require("coptan.remap")
-require("coptan.set")
+require("coptan.plugins")
+require("coptan.keymaps")
+require("coptan.options")
+require("coptan.treesitter")
 
 local augroup = vim.api.nvim_create_augroup
 local CoptanGroup = augroup('Coptan', {})
