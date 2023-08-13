@@ -120,5 +120,11 @@ return {
         opts = {} -- this is equalent to setup({}) function
     },
     "windwp/nvim-ts-autotag",
-    { "Coptan99/coderunner.nvim", dev = false }
+    { "Coptan99/coderunner.nvim", dev = false },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    }
 }
