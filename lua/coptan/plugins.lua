@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    'Mofiqul/dracula.nvim',
+    'catppuccin/nvim',
     'nvim-lualine/lualine.nvim',
     'kyazdani42/nvim-web-devicons',
     'tpope/vim-fugitive',
