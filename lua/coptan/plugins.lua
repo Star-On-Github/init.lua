@@ -14,14 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     'Mofiqul/dracula.nvim',
     'nvim-lualine/lualine.nvim',
-    {
-        "utilyre/barbecue.nvim",
-        name = "barbecue",
-        version = "*",
-        dependencies = {
-            "SmiteshP/nvim-navic",
-        },
-    },
     'kyazdani42/nvim-web-devicons',
     'tpope/vim-fugitive',
     'tpope/vim-sleuth',
@@ -62,6 +54,7 @@ require("lazy").setup({
             { "neovim/nvim-lspconfig" },
             { "williamboman/mason.nvim" },
             { "williamboman/mason-lspconfig.nvim" },
+            { "glepnir/lspsaga.nvim" },
 
             -- Autocompletion
             { "hrsh7th/nvim-cmp" },
@@ -77,7 +70,6 @@ require("lazy").setup({
             { "j-hui/fidget.nvim", branch = "legacy" },
         },
     },
-    "folke/trouble.nvim",
     {
         -- Highlight, edit, and navigate code
         'nvim-treesitter/nvim-treesitter',
